@@ -47,6 +47,7 @@ loginURL = r'http://douban.fm/j/login'          #   http://douban.fm/j/misc/logi
 #修改默认编码, 避免保存文件时乱码
 reload(sys)
 sys.setdefaultencoding('utf-8')
+os.system('color a')
 
 
 #声明一个MozillaCookieJar对象实例来保存cookie，之后写入文件
@@ -220,8 +221,8 @@ else:
     print ('\n成功获取 %d 首红心歌曲,失败 %d 首. 已经"红心歌曲.txt"保存在桌面.\n\n欢迎再次使用本程序~~~88~~' % (songNum, userJson['user_info']['play_record']['liked'] - songNum)).decode('utf-8','ignore')
 
 Clean()
-os.system("pause")
-exit()
+os.system("echo. & pause")
+os.system('start "" /max "notepad.exe" %s' % songFile.decode('utf-8','ignore').encode('gbk','ignore'))
 
 
 
